@@ -4,9 +4,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomerComponent } from './customer/customer.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'customer' },
+  { path: '', pathMatch: 'full', redirectTo: 'contactmanager' },
+  { path: 'contactmanager', loadChildren: './contactmanager/contactmanager.module#ContactmanagerModule' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'customer', component: CustomerComponent }
+  { path: 'customer', component: CustomerComponent },
+  { path: 'demo', loadChildren: './demo/demo.module#DemoModule' }
 ];
 
 @NgModule({
