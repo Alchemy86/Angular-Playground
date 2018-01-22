@@ -8,14 +8,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ContactmanagerAppComponent } from './contactmanager-app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MaincontentComponent } from './components/maincontent/maincontent.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { sidenavComponent } from './components/sidenav/sidenav.component';
+import { BookHolidayComponent } from '../pages/book-holiday/book-holiday.component';
 
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component: ContactmanagerAppComponent,
     children: [
-      {path: '', component: MaincontentComponent }
+      {path: '', component: MaincontentComponent },
+      {path: 'book', component: BookHolidayComponent}
     ] },
   { path: '**', redirectTo: '' }
 ];
@@ -32,6 +34,7 @@ const routes: Routes = [
     ContactmanagerAppComponent, 
     ToolbarComponent, 
     MaincontentComponent,
-    SidebarComponent]
+    BookHolidayComponent,
+    sidenavComponent]
 })
 export class ContactmanagerModule { }

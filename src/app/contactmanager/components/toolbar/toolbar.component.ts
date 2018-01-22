@@ -7,7 +7,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  @Output() toggleSidebar = new EventEmitter<void>();
+  @Output() togglesidenav = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {

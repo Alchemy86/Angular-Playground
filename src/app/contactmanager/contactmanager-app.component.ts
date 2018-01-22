@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-contactmanager-app',
   template: `
-   <app-sidebar></app-sidebar>
+   <app-sidenav></app-sidenav>
   `,
   styles: []
 })

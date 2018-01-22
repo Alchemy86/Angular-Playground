@@ -1,4 +1,4 @@
-.sidebar-container {
+.sidenav-container {
     flex: 1;
     position: fixed;
     width: 100%;
@@ -8,14 +8,14 @@
     min-height: 100%;
 }
 
-.sidebar-content {
+.sidenav-content {
     display: flex;
     height: 100%;
     flex-direction: column;
     background-color: #F3F7FF;
 }
 
-.sidebar {
+.sidenav {
     width: 240px;
     background: #1D3D77;
 }
@@ -34,4 +34,5 @@
     color: #A2C2FC;
     font-size: 14px;
     font-weight: bold;
+    line-height: 32px;
 }
