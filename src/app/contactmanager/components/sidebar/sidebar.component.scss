@@ -12,12 +12,26 @@
     display: flex;
     height: 100%;
     flex-direction: column;
+    background-color: #F3F7FF;
 }
 
 .sidebar {
     width: 240px;
+    background: #1D3D77;
 }
 
 .wrapper {
     margin: 50px;
+}
+
+.mat-toolbar.mat-primary {
+    background: #1D3D77;
+    color: white;
+    justify-content: center;
+}
+
+.mat-list-item {
+    color: #A2C2FC;
+    font-size: 14px;
+    font-weight: bold;
 }
