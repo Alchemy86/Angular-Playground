@@ -12,12 +12,14 @@ import { sidenavComponent } from './components/sidenav/sidenav.component';
 import { BookHolidayComponent } from '../pages/book-holiday/book-holiday.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import { UserService } from './services/user.service';
 
 const routes: Routes = [
   { path: '', component: ContactmanagerAppComponent,
     children: [
+      {path: 'book', component: BookHolidayComponent},
+      {path: ':id', component: MaincontentComponent },
       {path: '', component: MaincontentComponent },
-      {path: 'book', component: BookHolidayComponent}
     ] },
   { path: '**', redirectTo: '' }
 ];
@@ -29,6 +31,9 @@ const routes: Routes = [
     FlexLayoutModule,
     FormsModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    UserService
   ],
   declarations: [
     ContactmanagerAppComponent, 

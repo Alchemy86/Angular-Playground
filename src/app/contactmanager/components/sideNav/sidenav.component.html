@@ -4,7 +4,7 @@
     [opened]="!isScreenSmall()"
     [mode]="isScreenSmall() ? 'over' : 'side'">
     <mat-toolbar color="primary">Domino Industries</mat-toolbar>
-    <mat-list>
+    <mat-nav-list>
       <mat-list-item [routerLink]="['/contactmanager/']">Home</mat-list-item>
       <mat-list-item>Requests</mat-list-item>
       <mat-list-item>Request Sharing</mat-list-item>
@@ -14,7 +14,14 @@
       <mat-list-item>My Record</mat-list-item>
       <mat-list-item>First Aiders</mat-list-item>
       <mat-list-item></mat-list-item>
-      </mat-list>
+    </mat-nav-list>
+      <mat-nav-list>
+        <mat-list-item *ngFor="let user of users | async">
+           <a matLine [routerLink]="['/contactmanager', user.id]">
+             <mat-icon svgIcon="{{user.avatar}}"></mat-icon>{{ user.name }}
+           </a>
+        </mat-list-item>
+      </mat-nav-list>
   </mat-sidenav>
 
   <div class="sidenav-content">

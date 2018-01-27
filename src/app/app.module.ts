@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { DemoModule } from './demo/demo.module';
 
@@ -18,6 +19,7 @@ import { DemoModule } from './demo/demo.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     NoopAnimationsModule,
+    HttpClientModule,
     DemoModule
   ],
   providers: [],
