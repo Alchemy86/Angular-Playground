@@ -13,6 +13,7 @@ import { BookHolidayComponent } from '../pages/book-holiday/book-holiday.compone
 
 import { Routes, RouterModule } from '@angular/router';
 import { UserService } from './services/user.service';
+import { NotesComponent } from './components/notes/notes.component';
 
 const routes: Routes = [
   { path: '', component: ContactmanagerAppComponent,
@@ -40,6 +41,7 @@ const routes: Routes = [
     ToolbarComponent, 
     MaincontentComponent,
     BookHolidayComponent,
-    sidenavComponent]
+    sidenavComponent,
+    NotesComponent]
 })
 export class ContactmanagerModule { }
